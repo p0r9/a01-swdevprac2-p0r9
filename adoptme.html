@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>แจ้งความสนใจรับอุปการะสุนัข</title>
+    <style>
+        body {
+            font-family: "Sarabun", "TH Sarabun New", Arial, sans-serif;
+            background-color: #fff8f0;
+            color: #3b2a1a;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #8b5e3c;
+            padding: 12px 24px;
+            display: block;
+        }
+
+        nav a {
+            color: #f5e6d0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            color: #e8a84c;
+        }
+
+        header {
+            background-color: #c47f1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 28px 20px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0 0 6px 0;
+        }
+
+        header p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 30px auto 20px auto;
+            padding: 0 20px;
+        }
+
+        .form-section {
+            background-color: #ffffff;
+            border: 2px solid #d4b896;
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 24px;
+        }
+
+        .form-section h2 {
+            font-size: 1.3em;
+            color: #8b5e3c;
+            border-bottom: 2px solid #e8a84c;
+            padding-bottom: 8px;
+            margin: 0 0 20px 0;
+        }
+
+        .field-row {
+            margin-bottom: 16px;
+        }
+
+        .field-row label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #5c3317;
+            font-size: 0.95em;
+        }
+
+        .field-row label .req {
+            color: #c1694f;
+        }
+
+        .field-row input[type="text"],
+        .field-row input[type="email"],
+        .field-row input[type="tel"],
+        .field-row input[type="number"],
+        .field-row textarea,
+        .field-row select {
+            width: 100%;
+            padding: 9px 12px;
+            border: 2px solid #d4b896;
+            border-radius: 4px;
+            font-family: "Sarabun", "TH Sarabun New", Arial, sans-serif;
+            font-size: 0.95em;
+            color: #3b2a1a;
+            background-color: #fffbf5;
+            box-sizing: border-box;
+        }
+
+        .field-row input[type="number"] {
+            width: 120px;
+        }
+
+        .field-row textarea {
+            height: 90px;
+            resize: vertical;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 6px;
+        }
+
+        .checkbox-row {
+            margin-top: 6px;
+        }
+
+        .checkbox-row label {
+            font-weight: normal;
+            cursor: pointer;
+            line-height: 1.6;
+        }
+
+        .checkbox-row input[type="checkbox"] {
+            margin-right: 8px;
+            vertical-align: top;
+            margin-top: 3px;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: #c1694f;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 4px;
+            font-family: "Sarabun", "TH Sarabun New", Arial, sans-serif;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #a8573e;
+        }
+
+        footer {
+            background-color: #5c3317;
+            color: #f5e6d0;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer .student-info {
+            font-size: 0.9em;
+            color: #f5c97a;
+        }
+
+        #success-msg {
+            display: none;
+            background-color: #7a9e7e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">&#8592; กลับหน้าหลัก (ดูโปรไฟล์น้องหมา)</a>
+</nav>
+
+<header>
+    <h1>&#128203; แจ้งความสนใจรับอุปการะสุนัข</h1>
+    <p>กรอกข้อมูลให้ครบถ้วน</p>
+</header>
+
+<div class="form-container">
+
+    <div id="success-msg">
+        &#10003; ส่งแบบฟอร์มสำเร็จ! ขอบคุณที่สนใจรับอุปการะน้องหมา
+    </div>
+
+    <div class="form-section">
+        <h2>&#128100; ส่วนที่ 1 — ข้อมูลส่วนตัวผู้สนใจรับอุปการะ</h2>
+
+        <div class="field-row">
+            <label for="fname">ชื่อ <span class="req">*</span></label>
+            <input type="text" id="fname" name="fname" placeholder="ชื่อจริง">
+        </div>
+
+        <div class="field-row">
+            <label for="lname">นามสกุล <span class="req">*</span></label>
+            <input type="text" id="lname" name="lname" placeholder="นามสกุล">
+        </div>
+
+        <div class="field-row">
+            <label for="phone">เบอร์ติดต่อ <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="0XX-XXX-XXXX">
+        </div>
+
+        <div class="field-row">
+            <label for="email">อีเมล <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@email.com">
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>&#127968; ส่วนที่ 2 — สิ่งแวดล้อมในการเลี้ยงดู</h2>
+
+        <div class="field-row">
+            <label for="address">ที่อยู่ <span class="req">*</span></label>
+            <textarea id="address" name="address"
+                placeholder="บ้านเลขที่ ถนน ตำบล/แขวง อำเภอ/เขต จังหวัด รหัสไปรษณีย์"></textarea>
+        </div>
+
+        <div class="field-row">
+            <label for="housetype">ลักษณะที่พักอาศัย <span class="req">*</span></label>
+            <select id="housetype" name="housetype">
+                <option value="" disabled selected>— เลือกลักษณะที่พักอาศัย —</option>
+                <option value="garden_house">บ้านสวน</option>
+                <option value="single_house">บ้านเดี่ยว</option>
+                <option value="townhome">บ้านทาวน์โฮม</option>
+                <option value="condo">คอนโดมิเนียม / หอพัก</option>
+            </select>
+        </div>
+
+        <div class="field-row">
+            <label>วิธีการเลี้ยงสุนัข <span class="req">*</span></label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" id="indoor" name="keeptype" value="indoor">
+                    เลี้ยงสุนัขภายในบ้าน
+                </label>
+                <label>
+                    <input type="radio" id="outdoor" name="keeptype" value="outdoor">
+                    เลี้ยงสุนัขภายนอกบ้าน
+                </label>
+            </div>
+        </div>
+
+        <div class="field-row">
+            <label for="petcount">จำนวนสัตว์เลี้ยงที่มีอยู่ปัจจุบัน (ตัว)</label>
+            <input type="number" id="petcount" name="petcount" min="0" max="99" value="0">
+        </div>
+
+        <div class="field-row">
+            <label>การยืนยัน <span class="req">*</span></label>
+            <div class="checkbox-row">
+                <label>
+                    <input type="checkbox" id="confirm" name="confirm">
+                    การส่งแบบฟอร์มนี้เป็นการแจ้งความสนใจ โดยไม่รับรองการได้รับอุปการะสุนัข
+                </label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="handleSubmit()">
+            &#128054; ส่งแบบฟอร์มแจ้งความสนใจ
+        </button>
+
+    </div>
+</div>
+
+<footer>
+    <div class="student-info">
+        <strong>รหัสนิสิต:</strong> 6833183621 &nbsp;|&nbsp;
+        <strong>ชื่อ-นามสกุล:</strong> พลาธิป สิงห์ชู
+    </div>
+</footer>
+
+</body>
+</html>
